@@ -7,6 +7,7 @@ import { UserModule } from 'src/user/user.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
